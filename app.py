@@ -8,7 +8,10 @@ from openshift.dynamic import DynamicClient, exceptions
 
 def authenticate(host, key):
     """Creates an OpenShift DynamicClient using a Kubernetes client config."""
-    k8s_client = kubernetes.client.Configuration()
+    # FLYHARD ADD
+    configuration = kubernetes.client.Configuration()
+    setattr(configuration, 'verify_ssl', False)
+    k8s_client = kubernetes.client.Configuration(configuration) # FLYHARD MODIFIED
 
     k8s_client.host = host
     k8s_client.api_key = key
