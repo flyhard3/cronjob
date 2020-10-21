@@ -22,7 +22,7 @@ spec:
                 fieldRef:
                   fieldPath: metadata.namespace
             - name: HOST
-              value: https://open.shift.host:port
+              value: https://api.shira3-3.cp.fyre.ibm.com:6443
             image: py-cron/py-cron:1.0
             imagePullPolicy: Always
             name: py-cron
