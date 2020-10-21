@@ -14,8 +14,8 @@ spec:
   source:
     type: Git
     git:
-      ref: master
-      uri: https://github.com/clcollins/openshift-cronjob-example.git
+      ref: main
+      uri: https://github.com/flyhard3/cronjob.git
   strategy:
     type: Source
     sourceStrategy:
