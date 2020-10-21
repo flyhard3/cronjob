@@ -20,7 +20,7 @@ def authenticate(host, key):
             'api_key',
             {'authorization': "Bearer {0}".format(k8s_client.api_key)})
 
-    kubernetes.client.Configuration.set_default(k8s_client)
+    kubernetes.client.Configuration.set_default(configuration)
     return DynamicClient(kubernetes.client.ApiClient(k8s_client))
 
 
